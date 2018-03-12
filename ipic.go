@@ -23,7 +23,9 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"os/exec"
 	"path/filepath"
+	"runtime"
 	"strings"
 	"time"
 )
@@ -183,4 +185,11 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Couldn’t whip up the HTML: %s\n", err)
 	}
 
+	if runtime.GOOS == "darwin" {
+		cmd := exec.Command("open", fn)
+		err = cmd.Run()
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Couldn’t automatically open %s in a browser: %s", fn, err)
+		}
+	}
 }
