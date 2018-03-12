@@ -123,7 +123,6 @@ func main() {
 
 	c := http.Client{Timeout: 3 * time.Second}
 
-	fmt.Println(r)
 	resp, err := c.Do(r)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Something went wrong while trying to get Apple data: %s\n", err)
