@@ -33,11 +33,11 @@ import (
 var html = `<!DOCTYPE HTML>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset='UTF-8'>
 	<title>Pictures for {{.Title}}</title>
 	<style>
 		html {
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		}
 
 		h1 {
