@@ -1,0 +1,40 @@
+<refentry xml:id="ipic" xmlns='http://docbook.org/ns/docbook' version='0.0.1'>
+  <refmeta>
+    <refentrytitle>ipic</refentrytitle>
+    <manvolnum>1</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>ipic</refname>
+    <refpurpose>Generates a page of thumbnails and links to larger images for items in the iTunes/App/macOS App Stores.</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>ipic</command>
+      <group choice='opt'>
+        <arg choice='opt'>-i</arg>
+        <arg choice='opt'>-m</arg>
+        <arg choice='opt'>-a</arg>
+        <arg choice='opt'>-f</arg>
+        <arg choice='opt'>-t</arg>
+        <arg choice='opt'>-b</arg>
+        <arg choice='opt'>-h</arg>
+      </group>
+      <arg><replaceable>search terms</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Bugs</title>
+
+    <simplelist>
+        <member>“It works on my machine.”</member>
+        <member>Probably missing a <code>defer foo.Close()</code> somewhere.</member>
+    </simplelist>
+    
+    <para>For each file that is a directory, <command>ls</command> lists the contents of the directory; for each file that is an ordinary file, <command>ls</command> repeats its name and any other information requested.</para>
+  
+    <para>…</para>
+  </refsection>
+</refentry>
