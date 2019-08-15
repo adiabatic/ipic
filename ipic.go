@@ -139,22 +139,12 @@ func main() {
 	}
 	defer r.Body.Close()
 
-	//fmt.Println(resp.Header)
-
 	if !strings.HasPrefix(resp.Header.Get("Content-Type"), "text/javascript") {
 		fmt.Fprintf(os.Stderr, "Response doesn’t even claim to be text/javascript. Suspicious!\n")
 	}
 
 	sr := SearchResponse{}
-	/*
-		bodyBuf, err := ioutil.ReadAll(resp.Body)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "Couldn’t read body into a buffer: %s\n", err)
-			os.Exit(250)
-		}
 
-		fmt.Printf("%s", bodyBuf)
-	*/
 	err = json.NewDecoder(resp.Body).Decode(&sr)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Couldn’t decode the presumably-JSON response: %s\n", err)
@@ -174,7 +164,6 @@ func main() {
 	}
 
 	sr.Title = v.Get("term")
-	// fmt.Printf("%+v", sr)
 
 	fn := filepath.Join(os.Getenv("HOME"), "Desktop", "“"+sr.Title+"” Images.html")
 
