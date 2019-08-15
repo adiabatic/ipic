@@ -97,11 +97,9 @@ func main() {
 		fmt.Fprintf(os.Stderr, "\nOnly one option is allowed. The HTML file for the generated webpage is saved to ~/Desktop.\n")
 		return
 	} else if *iOS {
-		// 512
 		v.Set("media", "software")
 		v.Set("entity", "software")
 	} else if *macOS {
-		//size = 512
 		v.Set("media", "software")
 		v.Set("entity", "macSoftware")
 	} else if *album {
