@@ -37,7 +37,14 @@ var html = `<!DOCTYPE HTML>
 	<title>Pictures for {{.Title}}</title>
 	<style>
 		html {
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			font-family: system-ui, sans-serif;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			html {
+				color: white;
+				background: black;
+			}
 		}
 
 		h1 {
