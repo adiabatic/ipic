@@ -98,7 +98,7 @@ func main() {
 		return
 	} else if *iOS {
 		// 512
-		v.Set("media", "softare")
+		v.Set("media", "software")
 		v.Set("entity", "software")
 	} else if *macOS {
 		//size = 512
